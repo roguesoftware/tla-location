@@ -19,27 +19,35 @@ type server struct {
 }
 
 func (s *server) GetLocations(ctx context.Context, in *pb.LocationRequest) (*pb.LocationReply, error) {
-	name := in.GetName()
-	// lon := in.GetLongitude()
-	// lat := in.GetLatitude()
-	// rad := in.GetRadius()
+	lon := in.GetLongitude()
+	lat := in.GetLatitude()
+	rad := in.GetRadius()
 
 	// log.Printf("Received: %v %v %v", lon, lat, rad)
-	log.Printf("Received: %v", name)
+	log.Printf("Received: %v %v %v", lon, lat, rad)
 
-	// var locations []pb.Location
+	var locations []*pb.LocationItem
 	var location pb.LocationItem
 
 	location.Id = "abcdef"
-	// location.Longitude = -112.5
-	// location.Latitude = 32.3
-	// location.Address = "123 Main St, Leander, TX 78641"
-	// location.Title = "City Hall"
-	// location.Distance = 10468.4
+	location.Longitude = -112.5
+	location.Latitude = 32.3
+	location.Address = "123 Main St, Leander, TX 78641"
+	location.Title = "City Hall"
+	location.Distance = 10468.4
 
-	// locations = append(locations, location)
+	locations = append(locations, &location)
 
-	return &pb.LocationReply{Message: &location}, nil
+	location.Id = "123456-fjkghi"
+	location.Longitude = -112.3
+	location.Latitude = 32.5
+	location.Address = "456 South St, Leander, TX 78641"
+	location.Title = "Water Tower"
+	location.Distance = 10468.4
+
+	locations = append(locations, &location)
+
+	return &pb.LocationReply{Locations: locations}, nil
 }
 
 func main() {
