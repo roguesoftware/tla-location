@@ -1,0 +1,28 @@
+[
+    {
+        "id": "a4db51b1-731b-4c1b-a8d5-5da1a4980d02",
+        "address": "320 Dolores Street, San Francisco, CA, 94114, USA",
+        "lat": 37.7642,
+        "lon": -122.42662
+    }, {
+        "id": "f0045086-a57f-4fc2-ba4d-0db40b82d9a0",
+        "address": "298 Pacific Avenue, San Francisco, CA, USA",
+        "lat": 37.79783,
+        "lon": -122.40076
+    }, {
+        "id": "26449cbc-19c9-4c67-bff5-9f1c27ad3aa1",
+        "address": "1201 Mason St, San Francisco, CA, 94108, USA",
+        "lat": 37.79472,
+        "lon": -122.41167
+    }, {
+        "id": "4d633138-97ba-4a37-be99-309cd81cfded",
+        "address": "367 Addison Avenue Palo Alto, CA, USA",
+        "lat": 37.44309,
+        "lon": -122.15459
+    }, {
+        "id": "b74636b0-ee0e-483e-a27e-42cc8a20c5c1",
+        "address": "5550 Cottle Road, San Jose, CA, USA",
+        "lat": 37.25322,
+        "lon": -121.80289
+    }
+]
